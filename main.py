@@ -12,6 +12,7 @@ async def on_ready():
 	""" Printing that bot is ready. """
 	print("Bot is ready to be used")
 
+
 @client.event
 async def on_message(message):
 	""" Listening for messages in discrod channels and answers. """
@@ -19,5 +20,6 @@ async def on_message(message):
 		await message.channel.send('Specify the error with "docker help: "')
 	if message.content.find("docker help: ") != -1:
 		await message.channel.send(docker_help(message.content)) 
+
 
 client.run(token)

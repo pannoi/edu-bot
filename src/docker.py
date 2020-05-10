@@ -1,5 +1,7 @@
-import os
+from src.helpers import remove_pattern
 
 
 def docker_help(message):
-	return message
+	pattern = "docker help: "
+	error = remove_pattern(pattern, message)
+	return error
