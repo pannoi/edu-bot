@@ -11,8 +11,9 @@ import pytest
 	'git help: ',
 	'molecule help'
 ])
-def check_removing_pattern(pattern):
+def test_removing_pattern(pattern):
 	error = "something cool"
 	message = pattern + error
 	result = message.replace(pattern, '')
-	assert result == message
+	print(result)
+	assert result == error

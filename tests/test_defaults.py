@@ -3,6 +3,6 @@ import os
 import discord
 
 
-def check_tests():
+def test_tests():
 	""" Sampling tests. """
 	assert True
