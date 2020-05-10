@@ -1,12 +1,21 @@
-import os
 import discord
+import os
+import sys
 
-TOKEN = os.getenv('DISCORD_TOKEN')
 
 client = discord.Client()
+token = os.environ['DISCORD_TOKEN']
 
 @client.event
 async def on_ready():
-    print(f'{client.user} has connected to Discord!')
+	print(f'{client.user} has connected to Discord!')
 
-client.run(TOKEN)
+
+@client.event
+async def on_message(message):
+	if message.author == client.user:
+		return
+	if message.content.startswith('$hello'):
+		await message.channel.send('Hello!')
+
+client.run(token)
