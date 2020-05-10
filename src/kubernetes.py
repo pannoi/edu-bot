@@ -1,7 +1,7 @@
 from src.helpers import remove_pattern
 
 
-def docker_help(message):
+def kubernetes_help(message):
 	pattern = "kubernetes help: "
 	error = remove_pattern(pattern, message)
 	return error

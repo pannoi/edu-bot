@@ -1,6 +1,13 @@
 import discord
 import os
 from src.docker import docker_help
+from src.ansible import ansible_help
+from src.git import git_help
+from src.helm import helm_help
+from src.jenkins import jenkins_help
+from src.kubernetes import kubernetes_help
+from src.molecule import molecule_help
+from src.terraform import terraform_help
 
 
 client = discord.Client()
