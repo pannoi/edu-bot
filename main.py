@@ -12,16 +12,13 @@ from src.terraform import terraform_help
 
 client = discord.Client()
 token = os.environ['DISCORD_TOKEN']
-if os.environ['CHANNEL_NAME']:
-	channel = os.environ['CHANNEL_NAME']
-else:
-	channel = "general"
+channel = os.environ['CHANNEL_NAME']
 
 
 @client.event
 async def on_ready():
 	""" Printing that bot is ready. """
-	print("Bot is ready to be used")
+	print('Hey!')
 
 
 @client.event
