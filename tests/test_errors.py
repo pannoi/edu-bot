@@ -6,7 +6,7 @@ import pytest
 	'No files to commit'
 ])
 def test_get_solution(error):
-	""" Positive test of git solution. """
+	""" Positive test of _soltuins. """
 	if "to commit" in error:
 		result = "You didn't make any changes"
 	else:

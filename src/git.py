@@ -22,9 +22,9 @@ class git:
 		
 		:param error -> cutted message without pattern
 		"""
-		if "to commit" in error:
+		if "to commit" in error.lower():
 			return "You didn't make any changes, try to commit you code"
-		return 'Sorry here I can\'t help, please call @pannoi'
+		return 'Sorry here I can\'t help, try to call @pannoi'
 
 
 	def git_help(self, message) -> str:
@@ -37,4 +37,3 @@ class git:
 		error = remove_pattern(pattern, message)
 		answer = self.get_solution(error)
 		return answer
-	
